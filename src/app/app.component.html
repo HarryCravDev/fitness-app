@@ -1,1 +1,17 @@
-<router-outlet></router-outlet>
+<mat-sidenav-container>
+    <!-- Side Nav -->
+    <mat-sidenav #sideNav role="navigation">
+        <app-sidenav-list (closeSideNav)="sideNav.close()" ></app-sidenav-list>
+    </mat-sidenav>
+
+    <!-- Main content -->
+    <mat-sidenav-content>
+        <!-- Navbar -->
+        <app-header (toggleSideNavEmit)="sideNav.open()"></app-header>
+
+        <!-- Routed page loading -->
+        <main>
+            <router-outlet></router-outlet>
+        </main>
+    </mat-sidenav-content>
+</mat-sidenav-container>
