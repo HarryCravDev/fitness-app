@@ -1,3 +1,11 @@
+.signup-form {
+    padding: 3em;
+}
+
 .mat-form-field {
     width: 400px;
+}
+
+.signup-title {
+    text-align: center;
 }
